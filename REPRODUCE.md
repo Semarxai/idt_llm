@@ -6,9 +6,9 @@ and the data it consumes.
 | Display item / number | Script | Data | Status |
 |---|---|---|---|
 | Table 1 | — editorial | — | n/a |
-| Figure 1 — loop schematic | `pending` | — | source unconfirmed |
-| Figure 2a,b — Omega at W=1 | `pending` | `results/closure/omega_w1_*.csv` | **code missing** |
-| Figure 3 — band occupancy by W | `pending` | `results/closure/sweep_c*.csv` | **code missing** |
+| Figure 1 — loop schematic | none (drawn) | — | schematic, no script |
+| Figure 2a,b — Omega at W=1 | `scripts/fig2_omega_w1.py` | `results/closure/series_c1.npz`, `omega_w1_c1.csv`, `sweep_c3.csv` | complete |
+| Figure 3 — band occupancy by W | `scripts/fig3_sweep.py` | `results/closure/sweep_c*.csv` | complete |
 | Figure 4a–d — contribution | `scripts/fig4_v5.py` | `results/contribution/c1_nulls.csv`, `c3_nulls.csv` | complete |
 | Figure 5a–c — controls | `scripts/fig5.py` | `results/contribution/c1_controls.csv`, `c2_controls.csv`, `c1_cos.csv` | complete |
 | C1 clears 25 / 36 / 24 | `scripts/run_c1.py` | `results/contribution/c1_nulls.csv` | complete |
@@ -20,14 +20,15 @@ and the data it consumes.
 | Calibration long, type-I 0.045 | `scripts/calib.py` | `results/calibration/calibration.csv` | complete |
 | Calibration short, type-I 0.028 | `scripts/calib_short.py` | `results/calibration/calibration_short.csv` | complete |
 | Length / prefix analysis | `scripts/prefix.py` | `results/contribution/prefix.csv` | complete |
-| Omega counts, 57 of 58 and 1,025 vs 1,015 | `pending` | `results/closure/omega_counts.txt` | **code missing** |
-| Window bands W=2 … W=50 | `pending` | `results/closure/sweep_summary.txt` | **code missing** |
+| Omega counts, 57 of 58 and 1,025 vs 1,015 | `scripts/omega_counts.py` | `results/closure/omega_w1_*.csv` | complete |
+| Window bands W=2 … W=50 | `scripts/omega_sweep.py`, `scripts/sweep_summary.py` | `results/closure/sweep_c*.csv` | complete |
 | D1 bound verification | `src/verify_d1_proof.py`, `src/verify_band_scaling.py` | analytic | complete |
 | Estimator verification | `src/verify_estimator.py` | analytic | complete |
 | C2 generation pipeline | `src/generate.py`, `seam_log.py`, `seam_run.py`, `pilot_gate.py`, `task_hidden_spec.py`, `task_hidden_incident.py` | — | requires a local model endpoint and API keys |
 
-Rows marked `pending` are the closure driver and plotting scripts; the closure readings they
-produced are included in `results/closure/` and are the values reported in the manuscript.
+Closure provenance, column dictionary and run order are in `docs/closure_provenance.md`.
+Figure 2 panel a reads `results/closure/series_c1.npz`, the per-turn series for C1; it
+contains Omega values only and no message text.
 
 All scripts resolve their inputs and outputs through `src/paths.py`, relative to the
 repository root. Run them from anywhere:
