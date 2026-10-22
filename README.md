@@ -22,7 +22,8 @@ Two quantities are computed:
 src/         estimator and closure implementations, C2 generation pipeline
 scripts/     one script per analysis stage and per figure
 data/        C2 source, C3 manifest, C1 placeholder
-results/     every derived value cited in the manuscript
+results/     every derived value cited in the manuscript, including the
+             ten-configuration symbolization sensitivity analysis
 figures/     figures as published
 docs/        frozen decisions, proofs, claim table
 ```

@@ -19,6 +19,7 @@ and the data it consumes.
 | Control cosine 0.53 / 0.48 / 0.37 | `scripts/cos_c1.py`, `controls_c2.py` | `results/contribution/c1_cos.csv` | complete |
 | Calibration long, type-I 0.045 | `scripts/calib.py` | `results/calibration/calibration.csv` | complete |
 | Calibration short, type-I 0.028 | `scripts/calib_short.py` | `results/calibration/calibration_short.csv` | complete |
+| Symbolization sensitivity, ten configurations | `scripts/run_sensitivity.py` | `results/sensitivity/grid_*.csv`, `grid_summary.csv` | complete |
 | Length / prefix analysis | `scripts/prefix.py` | `results/contribution/prefix.csv` | complete |
 | Omega counts, 57 of 58 and 1,025 vs 1,015 | `scripts/omega_counts.py` | `results/closure/omega_w1_*.csv` | complete |
 | Window bands W=2 … W=50 | `scripts/omega_sweep.py`, `scripts/sweep_summary.py` | `results/closure/sweep_c*.csv` | complete |
@@ -42,3 +43,19 @@ python scripts/fig4_v5.py       # writes figures/fig4_epsilon.png
 C1 source is not in the repository, so `scripts/run_c1.py` expects
 `data/c1/source/turns_all_ts.csv` and will not run without it. The C1 results it would
 produce are already in `results/contribution/`.
+
+## Sensitivity analysis
+
+`scripts/run_sensitivity.py` repeats the C1 directional comparison across ten
+configurations: two embedding models (all-MiniLM-L6-v2, all-mpnet-base-v2) crossed with
+the declared symbol count, k-1, k+1, a shared prompt/response alphabet, and k fixed at 2
+across all record lengths. Each uses the full 2,000-permutation conditional reference.
+
+The MiniLM declared-k configuration reproduces the published result exactly (20 of 24
+negative, median -0.0545). All ten are negative and significant; bilaterally clearing
+records range from 11 to 30, the median difference from -0.028 to -0.067, and the largest
+significance value is 0.041.
+
+It needs the C1 source, which is not released, plus local copies of the two embedding
+models. Set `SCC_TURNS`, `SCC_MINILM` and `SCC_MPNET` to point at them. Embeddings are
+cached under `results/sensitivity/cache/`, so re-runs are immediate.
