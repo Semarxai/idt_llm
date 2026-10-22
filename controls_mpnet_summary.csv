@@ -1,0 +1,4 @@
+cell,mean_reduction_pct,min_reduction_pct,max_reduction_pct,label
+C1_compat_nonadj,88.41877616620603,76.01642868516508,97.57178085483332,"Control C (same symbol, local block)"
+C2_lengthA,85.84217712453915,61.753717562895915,98.00254726855998,Control A (length-matched)
+C3_dissimB,87.50729631724455,79.84458070246491,94.52786206191357,Control B (length + cosine ceiling)

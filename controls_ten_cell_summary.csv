@@ -1,0 +1,4 @@
+cell,median_reduction_pct,n_cells,label
+C1_compat_nonadj,88.10919537433655,10,"Control C (same symbol, local block)"
+C2_lengthA,87.40133241147097,10,Control A (length-matched)
+C3_dissimB,86.77012348780644,10,Control B (length + cosine ceiling)
