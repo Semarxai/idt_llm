@@ -15,13 +15,14 @@ gs=fig.add_gridspec(2,2,hspace=.60,wspace=.22,left=.065,right=.98,top=.90,bottom
 
 def scat(ax,d,title,sub,logx=True):
     for side,col,lbl in (('user',BLUE,"first side's message acting"),('model',ORANGE,"second side's message acting")):
-        s=d[d.side==side]; cl=s.clear_strat.astype(str)=='True'
+        s=d[d.side==side]; cl=(s.clear_strat.astype(str)=='True')&(s.saturated.astype(str)!='True')  # saturated readings fail the screen
         ax.scatter(s.N[cl]+1,s.eps[cl],s=34,color=col,alpha=.85,linewidths=0,zorder=3)
         ax.scatter(s.N[~cl]+1,s.eps[~cl],s=30,facecolors='none',edgecolors=col,linewidths=1.1,alpha=.6,zorder=2)
     ax.axhline(0,color='#9a9a9a',lw=.9,zorder=1)
     if logx:
         ax.set_xscale('log'); ax.set_xticks([25,50,100,200,400,800,1400])
         ax.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+        ax.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
     ax.set_xlabel('paired turns'); ax.set_ylabel('ε̂')
     ax.grid(axis='y',color='#ececec',lw=.8); ax.set_axisbelow(True)
     ax.set_title(title,loc='left',fontsize=11.5,fontweight='bold',color=INK,pad=16)
@@ -34,7 +35,8 @@ ax.legend(handles=[Line2D([],[],marker='o',ls='',ms=7,color=BLUE,label="human's 
                    Line2D([],[],marker='o',ls='',ms=7,mfc='none',mec='#666',label='inconclusive')],
           loc='upper left',frameon=False,fontsize=8.2,handletextpad=.4,labelspacing=.35)
 ax2=fig.add_subplot(gs[0,1])
-scat(ax2,c3,'b   C3   human–human','2,171 games · 620 second-speaker and 784 first-speaker readings clear',logx=False)
+ok3=(c3.clear_strat.astype(str)=='True')&(c3.saturated.astype(str)!='True')
+scat(ax2,c3,'b   C3   human–human',f"2,171 games · {int((ok3&(c3.side=='model')).sum())} second-speaker and {int((ok3&(c3.side=='user')).sum())} first-speaker readings clear",logx=False)
 ax2.set_xticks([25,35,45,55,65])
 
 ax3=fig.add_subplot(gs[1,0])
@@ -46,10 +48,11 @@ for c,mk,mfc,lab,yy in (('C1','o',None,'C1  human–LLM',1.045),('C3','s','none'
     ax3.text(-0.008,yy,'n',transform=ax3.transAxes,fontsize=7.4,color=MUT,ha='right')
 ax3.set_xscale('log'); ax3.set_xticks([25,35,45,55,65,90,120,200,400])
 ax3.get_xaxis().set_major_formatter(matplotlib.ticker.ScalarFormatter())
+ax3.xaxis.set_minor_formatter(matplotlib.ticker.NullFormatter())
 ax3.set_xlabel('prefix length  (first N paired turns)'); ax3.set_ylabel('share of records\nwhere both sides clear')
 ax3.set_ylim(-.04,1.05); ax3.grid(axis='y',color='#ececec',lw=.8); ax3.set_axisbelow(True)
 ax3.legend(loc='upper left',frameon=False,fontsize=8.4)
-ax3.set_title('c   Clearing against record length',loc='left',fontsize=11.5,fontweight='bold',color=INK,pad=44)
+ax3.set_title('c   Clearing against prefix length',loc='left',fontsize=11.5,fontweight='bold',color=INK,pad=44)
 ax3.text(0,1.175,'prefixes with fewer than 10 records are not plotted; n printed above',
          transform=ax3.transAxes,fontsize=8.4,color=MUT)
 

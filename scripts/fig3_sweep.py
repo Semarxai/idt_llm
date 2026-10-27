@@ -3,7 +3,7 @@ Figure 3 — the window sweep: excursions against the derived bound, and the
 directional lead, across W = 1, 2, 5, 10, 20, 50 in three corpora.
 
 Row 1  max |Omega| / band(W), the largest excursion any conversation produced
-       at that window, as a fraction of the analytic D1 bound.  1.0 is the
+       at that window, as a fraction of the analytic bound, eq. (3).  1.0 is the
        bound.  No band exists at W = 1, so that column is empty by construction.
 
 Row 2  the share of measurable conversations on which side A leads, against the
@@ -96,8 +96,11 @@ for col, (tag, name, sub) in enumerate(CORPORA):
     for key, colr, lab in (("rA", A_COL, "side A"), ("rB", B_COL, "side B")):
         ws = [W for W in GRIDW if W in rec and np.isfinite(rec[W][key])]
         ax.plot([xmap[W] for W in ws], [rec[W][key] for W in ws],
-                color=colr, lw=1.6, marker="o", ms=3.6, zorder=4,
-                solid_capstyle="round", label=lab)
+                color=colr, lw=1.6, zorder=4, solid_capstyle="round", label=lab)
+        for W in ws:   # same open-marker rule as row 2: fewer than 10 measurable
+            small = rec[W]["n"] < 10
+            ax.plot(xmap[W], rec[W][key], marker="o", ms=3.6, zorder=5,
+                    mfc=SURF if small else colr, mec=colr, mew=1.1)
     ax.set_ylim(0, 1.18)
     ax.set_yticks([0, 0.25, 0.5, 0.75, 1.0])
     ax.grid(axis="y", color=GRID, lw=0.6, zorder=0)
@@ -108,7 +111,7 @@ for col, (tag, name, sub) in enumerate(CORPORA):
                  pad=13, color=INK)
     ax.text(0.0, 1.035, sub, transform=ax.transAxes, fontsize=7, color=INK2)
     if col == 0:
-        ax.set_ylabel("max |Ω|  /  D1 bound")
+        ax.set_ylabel("max |Ω|  /  bound, eq. (3)")
         ax.text(0.985, 0.955, "the bound", transform=ax.transAxes,
                 fontsize=6.8, color=INK2, ha="right", va="top")
         ax.text(xmap[1], 0.055, "no band\nat W = 1", fontsize=6.4, color=INK2,
