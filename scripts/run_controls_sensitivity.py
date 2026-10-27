@@ -1,4 +1,4 @@
-scripts/"""
+"""
 Control substitutions under an alternative symbolization  (Reviewer 2 pt 4, Reviewer 4 pt 7)
 
 Repeats the three control substitutions reported in the paper (A, B, C) with one
