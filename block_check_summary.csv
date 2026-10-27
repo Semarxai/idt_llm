@@ -1,0 +1,4 @@
+block_length,usable_records,original24_usable,both_sides_clear,overlap_with_original24,new_entrants,inconclusive,negative,median_difference,sign_test_p
+8,43,24,23,22,1,20,20,-0.0536044369623346,0.00048828125
+16,40,24,24,23,1,16,20,-0.051085297117066,0.001543879508972168
+32,25,18,17,16,1,8,14,-0.04856615727179739,0.012725830078125

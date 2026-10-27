@@ -1,0 +1,19 @@
+{
+  "started": "2026-10-27 12:08:20",
+  "blocks": [
+    8,
+    16,
+    32
+  ],
+  "min_blocks": 5,
+  "draws": 1999,
+  "alpha": 0.05,
+  "p_rule": "(1 + #{Q* >= Q}) / (draws + 1)",
+  "seeds": "md5(record|side|block|length)",
+  "symbols": "MiniLM, declared k, separate, random_state=0, n_init=10",
+  "effect_summary": "manuscript eps_A from grid_minilm_k-declared_separate.csv",
+  "serial_ci_sha256": "76d18a69a928ebbb5ae27afc38f641e32782da1f9ae71e2a7d7106f34b9ac79d",
+  "python": "3.11.9",
+  "numpy": "1.26.4",
+  "sklearn": "1.8.0"
+}
