@@ -20,6 +20,9 @@ and the data it consumes.
 | Calibration long, type-I 0.045 | `scripts/calib.py` | `results/calibration/calibration.csv` | complete |
 | Calibration short, type-I 0.028 | `scripts/calib_short.py` | `results/calibration/calibration_short.csv` | complete |
 | Symbolization sensitivity, ten configurations | `scripts/run_sensitivity.py` | `results/sensitivity/grid_*.csv`, `grid_summary.csv` | complete |
+| Controls under mpnet, 87.4 / 86.8 / 88.1% over ten cells | `scripts/run_controls_sensitivity.py`, `run_controls_c2_sensitivity.py` | `results/sensitivity/controls_*.csv` | complete |
+| C1 block check, Supplementary Table 3 | `scripts/run_block_check.py` | `results/sensitivity/block_check_*.csv`, `block_check_manifest.json` | complete |
+| Supplementary Tables 1-2, synthetic checks | `supplementary/serial_ci/validate_markov_extension.py`, `validate_serial_ci.py` | `supplementary/serial_ci/results/` | complete |
 | Length / prefix analysis | `scripts/prefix.py` | `results/contribution/prefix.csv` | complete |
 | Omega counts, 57 of 58 and 1,025 vs 1,015 | `scripts/omega_counts.py` | `results/closure/omega_w1_*.csv` | complete |
 | Window bands W=2 … W=50 | `scripts/omega_sweep.py`, `scripts/sweep_summary.py` | `results/closure/sweep_c*.csv` | complete |
@@ -59,3 +62,16 @@ significance value is 0.041.
 It needs the C1 source, which is not released, plus local copies of the two embedding
 models. Set `SCC_TURNS`, `SCC_MINILM` and `SCC_MPNET` to point at them. Embeddings are
 cached under `results/sensitivity/cache/`, so re-runs are immediate.
+
+## Serial-dependence check
+
+`scripts/run_block_check.py` repeats the C1 directional comparison under the centred
+block reference of Supplementary Note 3, using `supplementary/serial_ci/serial_ci.py`
+unchanged (the script checks its SHA-256 before running). Block lengths 8, 16 and 32
+were fixed in advance; a length is used only for records with at least five blocks of
+transitions; 1,999 draws, plus-one rank, clear at p < 0.05, both sides must clear.
+The script first verifies that it reproduces the published grid exactly, then writes
+each test to `results/sensitivity/block_check_results.csv` as it completes, so an
+interrupted run resumes. Result: 20 of 23, 20 of 24 and 14 of 17 negative at the three
+lengths, medians -0.054, -0.051 and -0.049. Like the sensitivity analysis, it needs the
+C1 source and the cached MiniLM embeddings (`SCC_TURNS`, `SCC_CACHE`).

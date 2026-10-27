@@ -26,6 +26,9 @@ results/     every derived value cited in the manuscript, including the
              ten-configuration symbolization sensitivity analysis
 figures/     figures as published
 docs/        frozen decisions, proofs, claim table
+supplementary/serial_ci/
+             reference code and synthetic checks for the permutation reference
+             under serial dependence (Supplementary Notes 1-3, Tables 1-3; C. Wei)
 ```
 
 ## Declared parameters
