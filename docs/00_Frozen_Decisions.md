@@ -1,3 +1,10 @@
+> **Superseded planning record.** This file documents an earlier design for a seam-integrity
+> paper (W = 50, 60-turn conversations, n_min = 10) that was not carried forward. It is kept
+> unchanged below for transparency. The parameters used in the published manuscript are those
+> declared in its Methods and in `REPRODUCE.md`. The finding recorded here that Omega is
+> insensitive to truncation and compaction on conversational content (F11, F13) is reported in
+> the manuscript's Discussion.
+
 # Frozen Decisions — Seam Integrity Paper
 
 **13 September 2026 · Semarx Research**
