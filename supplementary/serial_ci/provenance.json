@@ -1,0 +1,25 @@
+{
+  "source_archive": "LLM_R23_serial_dependence_check.zip",
+  "source_archive_sha256": "6a21a09f3e911bbecd2ad0263133422fc08b596213b4e18b9b1a45b0b47b5b44",
+  "manuscript_source": "NSR_Paper_Revision_v11.docx",
+  "reviewer_source": "LLM Review II.pdf",
+  "response_source": "Round2_Response_to_Reviewers_v2.docx",
+  "technical_note": "LLM_Reviewer_Response_Notes.pdf",
+  "unit_tests": "5 of 5 passed during note preparation",
+  "summary_verification": "All 4 positive-control and 32 stress-grid summaries recomputed from per-replicate CSV files",
+  "full_grid_rerun_during_note_preparation": false,
+  "C1_reanalysis_completed": false,
+  "repository_commit_of_prior_code_review": "7f62c6afb2fd2fcd8f70d8362f45a1c02b6cfda6",
+  "current_revision": {
+    "changes": [
+      "removed data-transfer request and mandatory export schema",
+      "documented array-level integration into existing v11 pipeline",
+      "retained numerical algorithms and saved synthetic outputs"
+    ],
+    "C1_analysis": "not performed",
+    "simulation_grid_rerun": false,
+    "unit_tests": "5 tests passed",
+    "numerical_functions_verified_unchanged": true,
+    "saved_results_verified_unchanged": true
+  }
+}

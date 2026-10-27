@@ -1,0 +1,450 @@
+[
+  {
+    "scenario": "iid",
+    "N": 250,
+    "method": "within_S_permutation",
+    "rejected": 12,
+    "valid": 300,
+    "rejection_rate": 0.04,
+    "wilson95": [
+      0.023027321487942308,
+      0.06860421203864003
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 250,
+    "method": "block_8",
+    "rejected": 14,
+    "valid": 300,
+    "rejection_rate": 0.04666666666666667,
+    "wilson95": [
+      0.027998933682334012,
+      0.07679736022792105
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 250,
+    "method": "block_16",
+    "rejected": 18,
+    "valid": 300,
+    "rejection_rate": 0.06,
+    "wilson95": [
+      0.038286369524692054,
+      0.09283944515290843
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 250,
+    "method": "block_32",
+    "rejected": 28,
+    "valid": 300,
+    "rejection_rate": 0.09333333333333334,
+    "wilson95": [
+      0.06536421957889091,
+      0.1315853970170732
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 250,
+    "method": "within_S_permutation",
+    "rejected": 16,
+    "valid": 300,
+    "rejection_rate": 0.05333333333333334,
+    "wilson95": [
+      0.03309191251909646,
+      0.08486914177483133
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 250,
+    "method": "block_8",
+    "rejected": 17,
+    "valid": 300,
+    "rejection_rate": 0.056666666666666664,
+    "wilson95": [
+      0.03567747646328951,
+      0.08886595802247463
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 250,
+    "method": "block_16",
+    "rejected": 18,
+    "valid": 300,
+    "rejection_rate": 0.06,
+    "wilson95": [
+      0.038286369524692054,
+      0.09283944515290843
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 250,
+    "method": "block_32",
+    "rejected": 30,
+    "valid": 300,
+    "rejection_rate": 0.1,
+    "wilson95": [
+      0.07094791459501532,
+      0.1391664623846215
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 250,
+    "method": "within_S_permutation",
+    "rejected": 145,
+    "valid": 300,
+    "rejection_rate": 0.48333333333333334,
+    "wilson95": [
+      0.4273544128335898,
+      0.5397336862072283
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 250,
+    "method": "block_8",
+    "rejected": 52,
+    "valid": 300,
+    "rejection_rate": 0.17333333333333334,
+    "wilson95": [
+      0.13470060049746765,
+      0.22022614070256905
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 250,
+    "method": "block_16",
+    "rejected": 45,
+    "valid": 300,
+    "rejection_rate": 0.15,
+    "wilson95": [
+      0.11403246871185316,
+      0.194817611145329
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 250,
+    "method": "block_32",
+    "rejected": 47,
+    "valid": 300,
+    "rejection_rate": 0.15666666666666668,
+    "wilson95": [
+      0.11990681678878562,
+      0.2021080234520693
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 250,
+    "method": "within_S_permutation",
+    "rejected": 210,
+    "valid": 300,
+    "rejection_rate": 0.7,
+    "wilson95": [
+      0.6458824752950584,
+      0.749060336215123
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 250,
+    "method": "block_8",
+    "rejected": 94,
+    "valid": 300,
+    "rejection_rate": 0.31333333333333335,
+    "wilson95": [
+      0.2634843975598553,
+      0.36790231169730847
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 250,
+    "method": "block_16",
+    "rejected": 65,
+    "valid": 300,
+    "rejection_rate": 0.21666666666666667,
+    "wilson95": [
+      0.1737878350698321,
+      0.2667098486240773
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 250,
+    "method": "block_32",
+    "rejected": 58,
+    "valid": 300,
+    "rejection_rate": 0.19333333333333333,
+    "wilson95": [
+      0.15263726685545376,
+      0.2417837554956011
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 800,
+    "method": "within_S_permutation",
+    "rejected": 18,
+    "valid": 300,
+    "rejection_rate": 0.06,
+    "wilson95": [
+      0.038286369524692054,
+      0.09283944515290843
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 800,
+    "method": "block_8",
+    "rejected": 18,
+    "valid": 300,
+    "rejection_rate": 0.06,
+    "wilson95": [
+      0.038286369524692054,
+      0.09283944515290843
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 800,
+    "method": "block_16",
+    "rejected": 20,
+    "valid": 300,
+    "rejection_rate": 0.06666666666666667,
+    "wilson95": [
+      0.043567515545158274,
+      0.10072305951611496
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "iid",
+    "N": 800,
+    "method": "block_32",
+    "rejected": 20,
+    "valid": 300,
+    "rejection_rate": 0.06666666666666667,
+    "wilson95": [
+      0.043567515545158274,
+      0.10072305951611496
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 800,
+    "method": "within_S_permutation",
+    "rejected": 15,
+    "valid": 300,
+    "rejection_rate": 0.05,
+    "wilson95": [
+      0.03053164062934728,
+      0.08084703347274415
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 800,
+    "method": "block_8",
+    "rejected": 16,
+    "valid": 300,
+    "rejection_rate": 0.05333333333333334,
+    "wilson95": [
+      0.03309191251909646,
+      0.08486914177483133
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 800,
+    "method": "block_16",
+    "rejected": 15,
+    "valid": 300,
+    "rejection_rate": 0.05,
+    "wilson95": [
+      0.03053164062934728,
+      0.08084703347274415
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "state_memory_only",
+    "N": 800,
+    "method": "block_32",
+    "rejected": 16,
+    "valid": 300,
+    "rejection_rate": 0.05333333333333334,
+    "wilson95": [
+      0.03309191251909646,
+      0.08486914177483133
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 800,
+    "method": "within_S_permutation",
+    "rejected": 126,
+    "valid": 300,
+    "rejection_rate": 0.42,
+    "wilson95": [
+      0.3655060253806384,
+      0.4765168500152888
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 800,
+    "method": "block_8",
+    "rejected": 37,
+    "valid": 300,
+    "rejection_rate": 0.12333333333333334,
+    "wilson95": [
+      0.09081731429366795,
+      0.1653737240288234
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 800,
+    "method": "block_16",
+    "rejected": 27,
+    "valid": 300,
+    "rejection_rate": 0.09,
+    "wilson95": [
+      0.06259022560547936,
+      0.12777701079864834
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_090",
+    "N": 800,
+    "method": "block_32",
+    "rejected": 24,
+    "valid": 300,
+    "rejection_rate": 0.08,
+    "wilson95": [
+      0.054346855395144764,
+      0.11627324043347391
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 800,
+    "method": "within_S_permutation",
+    "rejected": 193,
+    "valid": 300,
+    "rejection_rate": 0.6433333333333333,
+    "wilson95": [
+      0.5876297656515226,
+      0.6954125825974409
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 800,
+    "method": "block_8",
+    "rejected": 66,
+    "valid": 300,
+    "rejection_rate": 0.22,
+    "wilson95": [
+      0.1768274459698328,
+      0.27025261791591293
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 800,
+    "method": "block_16",
+    "rejected": 46,
+    "valid": 300,
+    "rejection_rate": 0.15333333333333332,
+    "wilson95": [
+      0.11696640299091687,
+      0.19846605705810166
+    ],
+    "replicates": 300,
+    "resamples": 399
+  },
+  {
+    "scenario": "independent_persistent_paths_095",
+    "N": 800,
+    "method": "block_32",
+    "rejected": 35,
+    "valid": 300,
+    "rejection_rate": 0.11666666666666667,
+    "wilson95": [
+      0.08509313461466292,
+      0.15793314332415567
+    ],
+    "replicates": 300,
+    "resamples": 399
+  }
+]

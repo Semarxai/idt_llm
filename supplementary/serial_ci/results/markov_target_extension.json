@@ -1,0 +1,54 @@
+[
+  {
+    "N": 250,
+    "scenario": "independent_persistent_action",
+    "replicates": 500,
+    "resamples": 399,
+    "valid": 500,
+    "rejected": 26,
+    "rejection_rate": 0.052,
+    "wilson95": [
+      0.035730265115705276,
+      0.07510114393784553
+    ]
+  },
+  {
+    "N": 250,
+    "scenario": "state_dependent_persistent_action",
+    "replicates": 500,
+    "resamples": 399,
+    "valid": 500,
+    "rejected": 31,
+    "rejection_rate": 0.062,
+    "wilson95": [
+      0.044019209142681565,
+      0.08665971310163822
+    ]
+  },
+  {
+    "N": 800,
+    "scenario": "independent_persistent_action",
+    "replicates": 500,
+    "resamples": 399,
+    "valid": 500,
+    "rejected": 25,
+    "rejection_rate": 0.05,
+    "wilson95": [
+      0.034093745243849435,
+      0.0727681611715476
+    ]
+  },
+  {
+    "N": 800,
+    "scenario": "state_dependent_persistent_action",
+    "replicates": 500,
+    "resamples": 399,
+    "valid": 500,
+    "rejected": 30,
+    "rejection_rate": 0.06,
+    "wilson95": [
+      0.0423483564809462,
+      0.08436106312521979
+    ]
+  }
+]
