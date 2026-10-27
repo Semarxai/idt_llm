@@ -59,5 +59,5 @@ See `REPRODUCE.md` for the display-item to script to data map.
 
 ## Title of record
 
-Hafez, W., Wei, C. & Nazeri, A. *Toward Measuring Structural Drift in LLM Communication Loops.*
+Hafez, W., Nazeri, A. & Wei, C. *Toward Measuring Structural Drift in LLM Communication Loops.*
 Under review, Scientific Reports.
